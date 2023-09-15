@@ -206,13 +206,11 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   for (let num=1; num<100; num++){
-      if(num%num===0 && num%1===0 && num!==0 || num!==1){
+   for (let num=0; num<100; num++){
+      if(num%num==0 && num%1==0 && num!=0 || num!=1)
          return true;
-      }
-      else{
+      else
          return false;
-      }
    }
 }
 
@@ -220,12 +218,24 @@ function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if(valor==true){
+      return "Soy verdadero";
+   }
+   else{
+      return "Soy falso";
+   }
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   if(num>=100 && num<=999){
+      return true;
+   }
+   else{
+      return false;
+   }
 }
 
 function doWhile(num) {
@@ -233,6 +243,13 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   let i=0;
+   do{
+      num+=5;
+      i++;
+   }
+   while(i<8)
+   return(num);
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
