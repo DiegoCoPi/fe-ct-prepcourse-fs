@@ -206,11 +206,13 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   for (let num=0; num<100; num++){
-      if(num%num==0 && num%1==0 && num!=0 || num!=1)
+   for (let i=0; i<100; i++){
+      if(num%i==0 || num%1==0 && num!=0 || num!=1){
          return true;
-      else
+      }
+      else{
          return false;
+      }
    }
 }
 
