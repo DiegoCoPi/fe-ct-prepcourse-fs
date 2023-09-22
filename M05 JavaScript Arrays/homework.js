@@ -194,7 +194,7 @@ function mesesDelAño(array) {
       }  
    }
    if(array2.length>=1 && array2.length<=3){
-      return array2;
+      return array2
    }
    else if (array2.length==0){
       return "No se encontraron los meses pedidos"
