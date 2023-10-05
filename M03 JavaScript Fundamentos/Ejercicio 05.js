@@ -74,20 +74,14 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
-   Letra=letra.toLowerCase();
-   if(Letra.length===1 && (Letra==='A' || Letra==='E' || Letra==='I'
-   || Letra==='O' || Letra==='U')){
-      
-      return "Es Vocal";
-
+   letra=letra.toUpperCase();
+   if(letra.length==1 && letra==='A' || letra==='E'|| letra==='I'|| letra==='O' || letra==='U' ){
+      return "Es vocal"
    }
-   
-   else if (letra.leng>1){
-      return "Dato incorrecto"                                                                                                                      
-     
+   else if(letra.length>1){
+      return "Dato incorrecto"
    }
-
-
+   else return "Dato incorrecto"
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
