@@ -4,6 +4,7 @@ function devolverPrimerElemento(array) {
    // Retornar el primer elemento del arreglo recibido por parámetro.
    // Tu código:
    var Elemento=array[0];
+   //let Ultimo = array.shift()
    return (Elemento);
 }
 
@@ -11,6 +12,7 @@ function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
    let Ultimo = array[array.length-1];
+   //let Ultimo = array.pop()
    return (Ultimo);
 }
 
@@ -72,12 +74,14 @@ function agregarNumeros(arrayOfNums) {
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
    let suma=0
-
    arrayOfNums.forEach(num => {
       suma+=num
    });
-
    return suma;
+   /*arrayOfNums.reduce(function,elem){
+      acomulador=acomulador+elem
+      return acomulador
+      */ 
 }
 
 function promedioResultadosTest(resultadosTest) {
@@ -85,14 +89,11 @@ function promedioResultadosTest(resultadosTest) {
    // Itera (en un bucle) los elementos del arreglo y devuelve el promedio de las notas.
    // Tu código:
    let suma=0
-
    for (let i=0; i<resultadosTest.length; i++){
       suma+=resultadosTest[i];
    }
-
    return suma/resultadosTest.length;
-
-
+   
 }
 
 function numeroMasGrande(arrayOfNums) {
@@ -108,6 +109,10 @@ function numeroMasGrande(arrayOfNums) {
    })
 
    return CantidadGrande;
+   /*
+   let CantidadMax=Math.max(... arrayOfNums)
+   return (CantidadMax)
+   */
 }
 
 function multiplicarArgumentos() {
@@ -142,6 +147,11 @@ function cuentoElementos(array) {
       }
    })
    return cantidad;
+   /*
+   array.filter(funtion (elem)){
+      return elem>18
+   }
+   */
 }
 
 function diaDeLaSemana(numeroDeDia) {
@@ -173,13 +183,11 @@ function empiezaConNueve(num) {
 function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar true.
    // Caso contrario retornar false.
-   // Tu código:
+   // Tu código:)
    for(let i=0; i<array.length; i++){
-      if(array[i]!==array[0]){return false}
-      else {
-         return true;
-      }
+      if(array[0]!==array[i]) return false
    }
+   return true
 }
 
 function mesesDelAño(array) {
@@ -187,18 +195,11 @@ function mesesDelAño(array) {
    // "Marzo" y "Noviembre", guardarlos en un nuevo arreglo y retornarlo.
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
-   let array2=[];
-   for(let i=0; i<array.length; i++){
-      if(array[i]==="Enero"||array[i]==="Marzo"||array[i]==="Noviembre"){
-         array2.push(array[i]);
-      }  
-   }
-   if(array2.length>=1 && array2.length<=3){
-      return array2
-   }
-   else if (array2.length==0){
-      return "No se encontraron los meses pedidos"
-   }
+   var array2 = array.filter(function(elem){
+      if(elem==="Enero"||elem==="Marzo" || elem==="Noviembre") return elem
+   })
+   if(array2.length<3) return "No se encontraron los meses pedidos"
+   return array2
 }
 
 function tablaDelSeis() {

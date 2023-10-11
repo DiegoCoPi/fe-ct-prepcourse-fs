@@ -206,19 +206,19 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   for (let i=0; i<100; i++){
-      if((num%i==0 || num%1==0) && (num!=0 || num!=1 || num<0)){
-         return true
-      }
-      else return false
+   if(num<=1) return false
+   for(let i=2; i<num; i++){
+      if(num%i==0){return false;}
    }
+   return true
+   
 }
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
-   if(valor==true){
+   if(valor===true){
       return "Soy verdadero";
    }
    else{
@@ -244,10 +244,7 @@ function doWhile(num) {
    // Utilizar el bucle Do-While.
    // Tu código:
    let i=0;
-   do{
-      num+=5;
-      i++;
-   }
+   do{num+=5;i++;}
    while(i<8)
    return(num);
 }
